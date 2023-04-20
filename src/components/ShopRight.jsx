@@ -1,22 +1,43 @@
-import { Col, Row } from 'antd';
-import Product from './Product';
-
-import { productList } from '../assets/productsList';
-
-
-const productListItems=productList.map((product,key)=><Product key={key} data={product}></Product>)
-
+import { Col, Row, Button } from 'antd';
+import { useNavigate } from 'react-router-dom'
+import NumSelector from './utils/NumSelector';
+import Battery from './utils/Battery';
+import {
+  CheckCircleOutlined,
+} from '@ant-design/icons';
 function ShopRight() {
+  const navigate = useNavigate()
   return (
     <div className='ShopRight container p-12'>
       <Row className='h-1/5'>
-        <div>
-          <h1 className='text-5xl m-4'>我们为您精选了一些好物</h1>
-          <h3 className='text-3xl m-4'>您可提前选购，将在换电完成后为您奉上</h3>
+        <div className='m-4'>
+          <h1 className='text-3xl m-4'>前方排队 <span className='text-5xl'>1</span> 辆
+            <span className='opacity-70 ml-4'>约3分钟</span></h1>
         </div>
       </Row>
-      <Row className='flex-col w-full h-4/5 overflow-scroll'>
-      {productListItems}
+      <Row className='h-1/4'>
+        <Col>
+          <div className='m-4'>
+            <h1 className='text-3xl'><CheckCircleOutlined className='text-5xl greenIcon' /><span className='align-middle ml-8'>成功连接换电站</span> </h1>
+          </div>
+          <div className='m-4 mt-12'>
+            <h1 className='text-3xl'><CheckCircleOutlined className='text-5xl greenIcon' /><span className='align-middle ml-8'>自动跟车已开启</span> </h1>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <h1 className='text-3xl m-4'>待换电池 <NumSelector></NumSelector></h1>
+      </Row>
+      <Row>
+        <Battery></Battery><Battery></Battery>
+      </Row>
+      <Row>
+        <Col>
+          <h1 className='text-2xl m-4'>合计：￥ <span className='text-6xl'>135.9</span></h1>
+        </Col>
+        <Col>
+          <Button type="primary" shape="round" size="large" className='submitBtn ml-8' onClick={() => navigate('/pay')}>提交订单</Button>
+        </Col>
       </Row>
     </div>
   );

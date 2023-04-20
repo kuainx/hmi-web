@@ -1,15 +1,72 @@
+.ShopLeftContainer {
+  background: linear-gradient(to top, #4be9ff00 0%, #4be9ff 50%, #4be9ff00 100%);
+  padding: 2px;
+  border-radius: 20px;
+}
+
 .ShopLeft {
   background: linear-gradient(90deg, #08152b 0%, #12354f 100%);
   height: 100vh;
-  border: 2px solid;
   border-radius: 20px;
-  /* border-image: linear-gradient(red, yellow) 10; */
-  /* 冲突 */
 }
 
 .ShopRight {
   height: 100vh;
 }
+
 .Shop {
   background-image: linear-gradient(135deg, #0094ff 10%, #002e4f 100%);
+}
+
+.greenIcon {
+  color: #a4db00;
+  line-height: 0 !important;
+}
+
+.batteryContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submitBtn {
+  height: 80px !important;
+  width: 300px !important;
+  font-size: xx-large !important;
+}
+
+.payBg {
+  background-color: #00071b;
+  height: 100vh;
+  width: 100vw;
+}
+
+.payBorder {
+  width: 480px;
+  height: 620px;
+  background: linear-gradient(-45deg, #00ffff 0%, #00ffff00 50%, #00ffff 100%);
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.payContainer {
+  background-color: #0b1428;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+.cardName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.BlueLine {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1c9efd 0%, #1c4dfd 100%);
 }
