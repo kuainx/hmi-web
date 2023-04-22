@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import ShopLeft from './ShopLeft';
 import ShopRight from './ShopRight';
-function Shop() {
+function Finish() {
   return (
     <Row>
       <Col span={12} className='ShopLeftContainer'>
@@ -14,4 +14,4 @@ function Shop() {
   );
 }
 
-export default Shop;
+export default Finish;

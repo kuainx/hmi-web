@@ -14,10 +14,6 @@
   height: 100vh;
 }
 
-.Shop {
-  background-image: linear-gradient(135deg, #0094ff 10%, #002e4f 100%);
-}
-
 .greenIcon {
   color: #a4db00;
   line-height: 0 !important;
