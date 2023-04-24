@@ -1,0 +1,22 @@
+export const changeProcess=[
+  {
+    name:'自动泊入换电平台',
+    status:0
+  },
+  {
+    name:'车辆定位与抬升',
+    status:0
+  },
+  {
+    name:'更换电池',
+    status:0
+  },
+  {
+    name:'车辆下降',
+    status:0
+  },
+  {
+    name:'车辆自检',
+    status:0
+  }
+]

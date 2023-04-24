@@ -66,3 +66,9 @@
   height: 4px;
   background: linear-gradient(90deg, #1c9efd 0%, #1c4dfd 100%);
 }
+
+.finishContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 40px;
+}

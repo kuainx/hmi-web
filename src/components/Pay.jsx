@@ -1,7 +1,5 @@
 import { Col, Row, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import cmbcSvg from '../assets/cmbc.svg';
-import BlueLine from './utils/BlueLine';
 import { useState } from 'react';
 import PayCard from './PayCard';
 import PayElse from './PayElse';
@@ -28,7 +26,13 @@ function Pay() {
           {payMethod ? (
             <Row>
               <Col className='w-full m-4'>
-                <Button type='primary' shape='round' size='large' className='submitBtn' onClick={() => navigate('/')}>
+                <Button
+                  type='primary'
+                  shape='round'
+                  size='large'
+                  className='submitBtn'
+                  onClick={() => navigate('/start')}
+                >
                   付款
                 </Button>
               </Col>
