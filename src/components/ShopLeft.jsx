@@ -3,8 +3,7 @@ import Product from './Product';
 
 import { productList } from '../assets/productsList';
 
-
-const productListItems=productList.map((product,key)=><Product key={key} data={product}></Product>)
+const productListItems = productList.map((product, key) => <Product key={key} data={product} index={key}></Product>);
 
 function ShopLeft() {
   return (
@@ -15,9 +14,7 @@ function ShopLeft() {
           <h3 className='text-xl m-4'>您可提前选购，将在换电完成后为您奉上</h3>
         </div>
       </Row>
-      <Row className='flex-col w-full h-4/5 overflow-scroll'>
-      {productListItems}
-      </Row>
+      <Row className='flex-col w-full h-4/5 overflow-scroll'>{productListItems}</Row>
     </div>
   );
 }

@@ -25,8 +25,8 @@ function Finish() {
           </div>
         </Col>
       </Row>
-      <Row className='justify-center m-4 transform scale-150'>
-        <Col>
+      <Row className='justify-center m-4'>
+        <Col className='transform scale-150'>
           <Rate className='transform scale-150' allowHalf defaultValue={5} />
         </Col>
       </Row>

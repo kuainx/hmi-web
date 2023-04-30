@@ -1,10 +1,12 @@
 import { Col, Row, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useStores, mobxObserver } from '../store';
 import PayCard from './PayCard';
 import PayElse from './PayElse';
 function Pay() {
   const navigate = useNavigate();
+  const { runningStore } = useStores();
   const [payMethod, setPayMethod] = useState(true);
   return (
     <div className='payBg flex'>
@@ -19,7 +21,8 @@ function Pay() {
           <Row>
             <Col className='w-full m-4 mt-8'>
               <h2 className='text-6xl'>
-                <span className='text-2xl'>￥</span>135.9
+                <span className='text-2xl'>￥</span>
+                {runningStore.totalPrice}
               </h2>
             </Col>
           </Row>
@@ -46,4 +49,4 @@ function Pay() {
   );
 }
 
-export default Pay;
+export default mobxObserver(Pay);
