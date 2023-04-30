@@ -20,10 +20,10 @@ export function runningStore() {
       for (let i = 0; i < productList.length; i++) {
         sum += this.productNum[i] * productList[i].price;
       }
-      return Math.round(sum * 100) / 100;
+      return sum;
     },
     get totalPrice() {
-      return Math.round(this.battery * 48.8 * 100) / 100 + this.productPrice;
+      return Math.round((this.battery * 48.8 + this.productPrice) * 100) / 100;
     },
   });
 }

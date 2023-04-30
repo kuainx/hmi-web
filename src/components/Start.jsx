@@ -1,6 +1,8 @@
 import { Col, Row, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircleOutlined } from '@ant-design/icons';
+import img1 from '../assets/1.png';
+
 function Start() {
   const navigate = useNavigate();
   return (
@@ -27,7 +29,7 @@ function Start() {
       </Row>
       <Row>
         <Col>
-          <img className='w-4/5 m-auto' src='/src/assets/1.png' alt='' />
+          <img className='w-4/5 m-auto' src={img1} alt='' />
         </Col>
       </Row>
       <Row className='justify-center m-4'>
