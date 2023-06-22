@@ -1,6 +1,9 @@
 import { Card } from 'antd';
-import NumSelectorProduct from './utils/NumSelectorProduct';
+import ProductHover from './utils/ProductHover';
+import { Typography } from 'antd';
+const { Text, Link } = Typography;
 const { Meta } = Card;
+
 const Product = ({ data, index }) => (
   <Card
     hoverable
@@ -8,10 +11,18 @@ const Product = ({ data, index }) => (
       width: 200,
     }}
     className='m-2'
-    cover={<img alt={data.name} src={data.img} />}
+    cover={<ProductHover data={data} index={index} />}
   >
     <Meta title={data.name} />
-    <span className='text-xl'>{data.price}</span> <NumSelectorProduct index={index} />
+    <div className='text-center'>
+      <span className='text-2xl'>
+        ￥{data.price}
+        {'   '}
+        <Text type='secondary' delete>
+          ￥{data.price + 2}
+        </Text>
+      </span>
+    </div>
   </Card>
 );
 export default Product;

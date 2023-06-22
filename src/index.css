@@ -20,4 +20,5 @@ body {
   min-height: 100vh;
   color: rgba(255, 255, 255);
   background-image: linear-gradient(135deg, #0094ff 10%, #002e4f 100%);
+  overflow: hidden;
 }
