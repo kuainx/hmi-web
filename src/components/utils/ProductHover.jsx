@@ -12,17 +12,13 @@ function ProductHover({ data, index }) {
     runningStore.productNum[index] = newNum;
   };
   const imgClick = () => {
-    console.log('AAA');
     addNum();
-  };
-  const hovClick = () => {
-    console.log('BBB');
   };
   return (
     <div>
       <img onClick={imgClick} alt={data.name} src={data.img} />
       {num > 0 ? (
-        <div className='imgHover' onClick={hovClick}>
+        <div className='imgHover'>
           <Button
             className='align-middle ml-4'
             type='dashed'

@@ -78,12 +78,28 @@
 }
 
 .imgHover {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   top: -1px;
   background: rgb(0 0 0 / 38%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.shop2bg {
+  background: var(--unnamed, linear-gradient(90deg, #08152b 0%, #12354f 100%));
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 50px 10px;
+}
+
+.greenText {
+  color: #29cce0;
+}
+
+.dashedDivider {
+  border-color: rgba(5, 5, 5, 0.5);
+  margin: 6px 0;
 }

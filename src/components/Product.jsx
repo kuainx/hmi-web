@@ -8,7 +8,7 @@ const Product = ({ data, index }) => (
   <Card
     hoverable
     style={{
-      width: 200,
+      width: 150,
     }}
     className='m-2'
     cover={<ProductHover data={data} index={index} />}

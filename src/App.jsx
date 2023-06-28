@@ -5,6 +5,7 @@ import Start from './components/Start';
 import Change from './components/Change';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Shop2 from './components/Shop2';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/start' element={<Start />}></Route>
         <Route path='/change' element={<Change />}></Route>
         <Route path='/finish' element={<Finish />}></Route>
+        <Route path='/shop2' element={<Shop2 />}></Route>
       </Routes>
     </HashRouter>
   );
