@@ -7,11 +7,16 @@ import DiscountA from './utils/DiscountA';
 import DiscountB from './utils/DiscountB';
 import { useStores, mobxObserver } from '../store';
 import { useNavigate } from 'react-router-dom';
+import Category from './utils/Category';
 const { Search } = Input;
 
-const defaultProductListItems = productList.map((product, key) => (
-  <Product key={key} data={product} index={key}></Product>
-));
+const defaultProductListItems = productList.map((product, key) =>
+  product.price == -1 ? (
+    <Category title={product.name} index={key} />
+  ) : (
+    <Product key={key} data={product} index={key}></Product>
+  )
+);
 function Shop2() {
   const { runningStore } = useStores();
   const navigate = useNavigate();
@@ -22,7 +27,11 @@ function Shop2() {
     } else {
       setProductListItems(
         productList.map((product, key) =>
-          product.name.includes(filter) ? <Product key={key} data={product} index={key}></Product> : ''
+          product.name.includes(filter) && product.price !== -1 ? (
+            <Product key={key} data={product} index={key}></Product>
+          ) : (
+            ''
+          )
         )
       );
     }
@@ -54,10 +63,10 @@ function Shop2() {
         </Col>
       </Row>
       <Row className='h-4/6'>
-        <Col span={12} className='px-4 flex flex-col w-full h-full flex-wrap overflow-scroll '>
+        <Col span={14} className='px-4 flex flex-col w-full h-full flex-wrap overflow-scroll content-start'>
           {productListItems}
         </Col>
-        <Col span={12} className='h-full px-8 py-4 overflow-auto '>
+        <Col span={10} className='h-full px-8 py-4 overflow-auto '>
           <DiscountA />
           <DiscountB />
           <DiscountB />

@@ -16,7 +16,7 @@ function ProductHover({ data, index }) {
   };
   return (
     <div>
-      <img onClick={imgClick} alt={data.name} src={data.img} />
+      <img style={{ width: 150, height: 150, margin: 'auto' }} onClick={imgClick} alt={data.name} src={data.img} />
       {num > 0 ? (
         <div className='imgHover'>
           <Button

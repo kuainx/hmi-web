@@ -1,4 +1,5 @@
 export const productList = [
+  { name: '饮料', price: -1 },
   {
     name: '可口可乐330ml',
     price: 4.9,
@@ -70,6 +71,12 @@ export const productList = [
     img: '//img13.360buyimg.com/n1/jfs/t1/133815/25/34772/58120/642b9b0aFed8e4135/ddaa978d129685ca.jpg',
   },
   {
+    name: '雀巢咖啡1+2',
+    price: 2.9,
+    img: '//img13.360buyimg.com/n1/jfs/t1/197593/28/37596/78813/649964b1F7912b149/261639606db4c41d.jpg',
+  },
+  { name: '食品', price: -1 },
+  {
     name: '红烧牛肉面',
     price: 6.9,
     img: '//img13.360buyimg.com/n1/jfs/t1/191216/2/32509/145970/63fdd07dFeadfb590/1aa6479f71456958.jpg',
@@ -100,16 +107,6 @@ export const productList = [
     img: '//img10.360buyimg.com/n1/jfs/t1/106978/23/32355/54216/6462fb27F5f8c2e33/e601df7d5a72a439.jpg',
   },
   {
-    name: '雀巢咖啡1+2',
-    price: 2.9,
-    img: '//img13.360buyimg.com/n1/jfs/t1/197593/28/37596/78813/649964b1F7912b149/261639606db4c41d.jpg',
-  },
-  {
-    name: '维达手帕纸5张',
-    price: 1.9,
-    img: '//img12.360buyimg.com/n1/jfs/t1/106945/34/27515/329830/625cdf7aEe80dc148/14652c9513b0f7ed.jpg',
-  },
-  {
     name: '达利园小面包1个',
     price: 0.9,
     img: '//img12.360buyimg.com/n1/jfs/t1/213089/17/29456/166568/6459f986F089ba4e8/316039ccc928f2e0.jpg',
@@ -118,5 +115,47 @@ export const productList = [
     name: '恰恰瓜子20g',
     price: 1.9,
     img: '//img10.360buyimg.com/n1/jfs/t1/219225/24/14821/97557/6232a630E7e8a05e3/2655dd372ded3869.jpg',
+  },
+  { name: '日用', price: -1 },
+  {
+    name: '维达手帕纸5张',
+    price: 1.9,
+    img: '//img12.360buyimg.com/n1/jfs/t1/106945/34/27515/329830/625cdf7aEe80dc148/14652c9513b0f7ed.jpg',
+  },
+  {
+    name: '创口贴8片',
+    price: 16.9,
+    img: '//img11.360buyimg.com/n1/jfs/t1/174682/22/28448/252733/621ed802Eb64dffa8/acb921737f8aaf93.jpg',
+  },
+  {
+    name: '医用口罩10只',
+    price: 4.9,
+    img: '//img13.360buyimg.com/n1/jfs/t1/218622/7/30386/41669/6474be11Fcf5b3ed7/e3d667e5c5e84100.jpg',
+  },
+  {
+    name: 'N95口罩1只',
+    price: 2.9,
+    img: '//img11.360buyimg.com/n1/jfs/t1/94937/20/39308/78242/6474c3ebF41f214af/1fc6c7564e4c2ba8.jpg',
+  },
+  { name: '数码', price: -1 },
+  {
+    name: '数据线A-Lightning',
+    price: 49.9,
+    img: '//img11.360buyimg.com/n1/s450x450_jfs/t1/107522/20/30204/48179/64902549Fe7da3f0f/5777c3b4c6d6c98d.jpg',
+  },
+  {
+    name: '数据线C-Lightning',
+    price: 59.9,
+    img: '//img11.360buyimg.com/n1/jfs/t1/206978/18/30781/148597/640e9a77F83119dca/ebc022a0b2c94b11.jpg',
+  },
+  {
+    name: '数据线A-C',
+    price: 29.9,
+    img: '//img12.360buyimg.com/n1/s450x450_jfs/t1/4322/7/18743/78351/64128654F726d6bd8/33b84957e1e48ca7.jpg',
+  },
+  {
+    name: '数据线C-C',
+    price: 29.9,
+    img: '//img12.360buyimg.com/n1/jfs/t1/20/40/20759/84668/6365d080E5bf96585/a2f494f9bf0b927a.jpg',
   },
 ];

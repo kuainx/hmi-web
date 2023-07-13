@@ -8,12 +8,15 @@ const Product = ({ data, index }) => (
   <Card
     hoverable
     style={{
-      width: 150,
+      width: 200,
     }}
-    className='m-2'
+    className='m-2 mx-6'
     cover={<ProductHover data={data} index={index} />}
   >
-    <Meta title={data.name} />
+    <Meta />
+    <div className='text-center truncate font-bold'>
+      <span className='text-2xl '>{data.name}</span>
+    </div>
     <div className='text-center'>
       <span className='text-2xl'>
         ￥{data.price}

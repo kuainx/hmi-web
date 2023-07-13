@@ -4,7 +4,7 @@ import { Divider, Button } from 'antd';
 
 const DiscountA = () => (
   <div className='mb-24'>
-    <div className='origin-top-left scale-150' style={{ width: 500 }}>
+    <div className='origin-top-left' style={{ width: 500, transform: 'scale(1.4)' }}>
       <Tag color='cyan' className='ml-8'>
         优能平台券
       </Tag>
