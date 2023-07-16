@@ -71,6 +71,7 @@
   width: 100vw;
   height: 100vh;
   padding: 80px 40px;
+  color: white;
 }
 
 .ant-card-body {
@@ -92,7 +93,7 @@
   background: var(--unnamed, linear-gradient(90deg, #08152b 0%, #12354f 100%));
   width: 100vw;
   height: 100vh;
-  padding: 10px 50px 40px;
+  padding: 5px 50px 5px;
 }
 
 .greenText {
@@ -102,4 +103,8 @@
 .dashedDivider {
   border-color: rgba(5, 5, 5, 0.5);
   margin: 6px 0;
+}
+
+.ant-modal-close {
+  display: none !important;
 }

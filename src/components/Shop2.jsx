@@ -45,10 +45,9 @@ function Shop2() {
   return (
     <div className='shop2bg'>
       <Row className='h-1/6'>
-        <Col span={8}>
+        <Col span={8} className='flex items-center'>
           <div>
-            <h1 className='text-3xl m-4'>购物商城</h1>
-            <h3 className='text-xl m-4'>您可提前选购，将在换电完成后为您奉上</h3>
+            <h3 className='text-3xl m-4'>您可提前选购，将在换电完成后为您奉上</h3>
           </div>
         </Col>
         <Col span={4} className='flex items-center'>

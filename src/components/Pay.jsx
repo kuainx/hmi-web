@@ -1,15 +1,33 @@
-import { Col, Row, Button } from 'antd';
+import { Col, Row, Button, Modal, Result } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useStores, mobxObserver } from '../store';
+import { CheckCircleOutlined } from '@ant-design/icons';
 import PayCard from './PayCard';
 import PayElse from './PayElse';
 function Pay() {
   const navigate = useNavigate();
   const { runningStore } = useStores();
   const [payMethod, setPayMethod] = useState(true);
+  const [modal2Open, setModal2Open] = useState(false);
   return (
     <div className='payBg flex'>
+      <Modal
+        title=''
+        centered
+        open={modal2Open}
+        onOk={() => setModal2Open(false)}
+        onCancel={() => setModal2Open(false)}
+        footer={null}
+        maskClosable={false}
+      >
+        <Result
+          className='scale-150'
+          status='success'
+          title='您已付款完成'
+          subTitle='请点击左上角 返回 按钮以继续换电流程'
+        />
+      </Modal>
       <div className='payBorder m-auto'>
         <div className='payContainer'>
           {payMethod ? <PayCard></PayCard> : <PayElse></PayElse>}
@@ -34,7 +52,7 @@ function Pay() {
                   shape='round'
                   size='large'
                   className='submitBtn'
-                  onClick={() => navigate('/start')}
+                  onClick={() => setModal2Open(true)}
                 >
                   付款
                 </Button>
